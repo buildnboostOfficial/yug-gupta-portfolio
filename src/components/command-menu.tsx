@@ -3,8 +3,6 @@
 import { useCommandState } from "cmdk";
 import type { LucideProps } from "lucide-react";
 import {
-  AwardIcon,
-  BookmarkIcon,
   BoxIcon,
   BriefcaseBusinessIcon,
   CornerDownLeftIcon,
@@ -13,7 +11,6 @@ import {
   MoonStarIcon,
   QuoteIcon,
   RssIcon,
-  ShieldCheckIcon,
   SunMediumIcon,
   TextIcon,
   TextInitialIcon,
@@ -41,12 +38,12 @@ import { useSound } from "@/hooks/use-sound";
 import { trackEvent } from "@/lib/events";
 import { copyText } from "@/utils/copy";
 
-import { ChanhDaiMark, getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
-import { ComponentIcon, Icons } from "./icons";
+import { Icons } from "./icons";
 import { Button } from "./ui/button";
 import { Kbd, KbdGroup } from "./ui/kbd";
 import { Separator } from "./ui/separator";
+import { getMarkSVG, YugGuptaMark } from "./yug-gupta-mark";
 
 type CommandLinkItem = {
   title: string;
@@ -62,12 +59,7 @@ const MENU_LINKS: CommandLinkItem[] = [
   {
     title: "Portfolio",
     href: "/",
-    icon: ChanhDaiMark,
-  },
-  {
-    title: "Components",
-    href: "/components",
-    icon: Icons.react,
+    icon: YugGuptaMark,
   },
   {
     title: "Blog",
@@ -101,21 +93,6 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     title: "Projects",
     href: "/#projects",
     icon: BoxIcon,
-  },
-  {
-    title: "Honors & Awards",
-    href: "/#awards",
-    icon: AwardIcon,
-  },
-  {
-    title: "Certifications",
-    href: "/#certs",
-    icon: ShieldCheckIcon,
-  },
-  {
-    title: "Bookmarks",
-    href: "/#bookmarks",
-    icon: BookmarkIcon,
   },
   {
     title: "Download vCard",
@@ -219,17 +196,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     [playClick, setTheme]
   );
 
-  const { componentLinks, blogLinks } = useMemo(
-    () => ({
-      componentLinks: posts
-        .filter((post) => post.metadata?.category === "components")
-        .map(postToCommandLinkItem),
-      blogLinks: posts
-        .filter((post) => post.metadata?.category !== "components")
-        .map(postToCommandLinkItem),
-    }),
-    [posts]
-  );
+  const blogLinks = useMemo(() => posts.map(postToCommandLinkItem), [posts]);
 
   return (
     <>
@@ -282,13 +249,6 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
           />
 
           <CommandLinkGroup
-            heading="Components"
-            links={componentLinks}
-            fallbackIcon={Icons.react}
-            onLinkSelect={handleOpenLink}
-          />
-
-          <CommandLinkGroup
             heading="Blog"
             links={blogLinks}
             fallbackIcon={TextIcon}
@@ -310,7 +270,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
                 );
               }}
             >
-              <ChanhDaiMark />
+              <YugGuptaMark />
               Copy Mark as SVG
             </CommandItem>
 
@@ -497,7 +457,7 @@ function CommandMenuFooter() {
       <div className="flex h-10" />
 
       <div className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between gap-2 border-t bg-zinc-100/30 px-4 text-xs font-medium dark:bg-zinc-800/30">
-        <ChanhDaiMark className="size-6 text-muted-foreground" aria-hidden />
+        <YugGuptaMark className="size-6 text-muted-foreground" aria-hidden />
 
         <div className="flex shrink-0 items-center gap-2">
           <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
@@ -517,18 +477,8 @@ function CommandMenuFooter() {
 }
 
 function postToCommandLinkItem(post: Post): CommandLinkItem {
-  const isComponent = post.metadata?.category === "components";
-
-  const IconComponent = isComponent
-    ? (props: LucideProps) => (
-        <ComponentIcon {...props} variant={post.metadata.icon} />
-      )
-    : undefined;
-
   return {
     title: post.metadata.title,
-    href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
-    keywords: isComponent ? ["component"] : undefined,
-    icon: IconComponent,
+    href: `/blog/${post.slug}`,
   };
 }

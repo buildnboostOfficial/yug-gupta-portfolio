@@ -1,14 +1,8 @@
-# [chanhdai.com](https://chanhdai.com) &middot; [![GitHub License](https://img.shields.io/github/license/ncdai/chanhdai.com?label=License)](https://github.com/ncdai/chanhdai.com/blob/main/LICENSE) ![GitHub Repo Views](https://gitviews.com/repo/ncdai/chanhdai.com.svg?style=flat&label-color=%23555&color=%23f59e0b)
+# [yuggupta.com](https://yuggupta.com) &middot; [![GitHub License](https://img.shields.io/github/license/yuggupta/portfolio?label=License)](https://github.com/yuggupta/portfolio/blob/main/LICENSE)
 
-A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
+A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase my work as a Full-Stack Developer and Product Builder.
 
-Check out the live site: [chanhdai.com](https://chanhdai.com)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-dark.webp?t=1764345394">
-  <source media="(prefers-color-scheme: light)" srcset="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1764345394">
-  <img src="https://assets.chanhdai.com/images/screenshot-desktop-light.webp?t=1764345394" alt="Screenshot">
-</picture>
+Check out the live site: [yuggupta.com](https://yuggupta.com)
 
 ## Overview
 
@@ -75,11 +69,11 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 
 ## Stats
 
-![Stats](https://repobeats.axiom.co/api/embed/583bf08fbdef57c3921d3cfda902d546df3e6ed1.svg "Repobeats analytics image")
+![Stats](https://repobeats.axiom.co/api/embed/yuggupta-portfolio.svg "Repobeats analytics image")
 
 ## Star History
 
-[![Star History](https://starchart.cc/ncdai/chanhdai.com.svg?variant=adaptive&line=%23d37f2c)](https://starchart.cc/ncdai/chanhdai.com)
+[![Star History](https://starchart.cc/yuggupta/portfolio.svg?variant=adaptive&line=%23d37f2c)](https://starchart.cc/yuggupta/portfolio)
 
 ## Acknowledgments
 
@@ -97,8 +91,3 @@ You're free to use my code! Just make sure to <ins>remove all my personal inform
 - [c15t](https://c15t.com)
 - And many other open-source libraries used in `package.json`
 
-## GitAds Sponsored
-
-[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=ncdai/chanhdai.com@github)](https://gitads.dev/v1/ad-track?source=ncdai/chanhdai.com@github)
-
-<!-- GitAds-Verify: QICCAB4PFWV9MHUGPGPN5B2I8SAXLAOK -->

@@ -49,7 +49,7 @@ export async function generateMetadata({
 
   const { title, description, image, createdAt, updatedAt } = post.metadata;
 
-  const postUrl = getPostUrl(post);
+  const postUrl = `/blog/${post.slug}`;
   const ogImage = image || `/og/simple?title=${encodeURIComponent(title)}`;
 
   return {
@@ -86,7 +86,7 @@ function getPageJsonLd(post: Post): WithContext<PageSchema> {
     image:
       post.metadata.image ||
       `/og/simple?title=${encodeURIComponent(post.metadata.title)}`,
-    url: `${SITE_INFO.url}${getPostUrl(post)}`,
+    url: `${SITE_INFO.url}/blog/${post.slug}`,
     datePublished: new Date(post.metadata.createdAt).toISOString(),
     dateModified: new Date(post.metadata.updatedAt).toISOString(),
     author: {
@@ -142,11 +142,10 @@ export default async function Page({
 
         <div className="flex items-center gap-2">
           <LLMCopyButtonWithViewOptions
-            markdownUrl={`${getPostUrl(post)}.mdx`}
-            isComponent={post.metadata.category === "components"}
+            markdownUrl={`/blog/${post.slug}.mdx`}
           />
 
-          <PostShareMenu url={getPostUrl(post)} />
+          <PostShareMenu url={`/blog/${post.slug}`} />
 
           {previous && (
             <Tooltip>
@@ -225,9 +224,4 @@ export default async function Page({
       <div className="screen-line-before h-4 w-full" />
     </>
   );
-}
-
-function getPostUrl(post: Post) {
-  const isComponent = post.metadata.category === "components";
-  return isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`;
 }

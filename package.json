@@ -1,24 +1,24 @@
 {
-  "name": "chanhdai.com",
+  "name": "yuggupta.com",
   "version": "0.1.0",
   "description": "A minimal, pixel-perfect dev portfolio, component registry, and blog.",
-  "homepage": "https://chanhdai.com",
+  "homepage": "https://yuggupta.com",
   "license": "MIT",
   "author": {
-    "name": "Nguyen Chanh Dai",
-    "email": "dai@chanhdai.com",
-    "url": "https://github.com/ncdai"
+    "name": "Yug Gupta",
+    "email": "yug@yuggupta.com",
+    "url": "https://github.com/yuggupta"
   },
   "contributors": [
     {
-      "name": "Nguyen Chanh Dai",
-      "email": "dai@chanhdai.com",
-      "url": "https://github.com/ncdai"
+      "name": "Yug Gupta",
+      "email": "yug@yuggupta.com",
+      "url": "https://github.com/yuggupta"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+    "url": "git+https://github.com/yuggupta/portfolio.git"
   },
   "scripts": {
     "dev": "next dev -p 1408",

@@ -20,10 +20,6 @@ export const MAIN_NAV: NavItem[] = [
     href: "/",
   },
   {
-    title: "Components",
-    href: "/components",
-  },
-  {
     title: "Blog",
     href: "/blog",
   },
@@ -33,14 +29,15 @@ export const MAIN_NAV: NavItem[] = [
   // },
 ];
 
-export const GITHUB_USERNAME = "ncdai";
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com";
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
+export const GITHUB_USERNAME = "yug-space";
+export const SOURCE_CODE_GITHUB_REPO = "yug-space/yug-gupta-portfolio";
+export const SOURCE_CODE_GITHUB_URL =
+  "https://github.com/yug-space/yug-gupta-portfolio";
 
-export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai";
+export const SPONSORSHIP_URL = "https://github.com/sponsors/yug-space";
 
 export const UTM_PARAMS = {
-  utm_source: "chanhdai.com",
+  utm_source: "yuggupta.com",
   utm_medium: "referral",
   utm_campaign: "portfolio",
 };

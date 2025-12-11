@@ -18,23 +18,48 @@ export function ProfileHeader() {
         </div>
 
         <a
-          href="https://vietnam.gov.vn/about-viet-nam"
+          href="https://www.india.gov.in"
           target="_blank"
           rel="noreferrer"
           className="absolute top-0 -left-px"
         >
-          {/* Flag of Viet Nam */}
+          {/* Flag of India */}
           <svg
             className="h-8 sm:h-9"
             viewBox="0 0 30 20"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>Flag of Viet Nam</title>
-            <rect width="30" height="20" fill="#F00" />
-            <polygon
-              points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85"
-              fill="#FFEB00"
+            <title>Flag of India</title>
+            <rect width="30" height="6.67" fill="#FF9933" />
+            <rect y="6.67" width="30" height="6.67" fill="#FFFFFF" />
+            <rect y="13.33" width="30" height="6.67" fill="#138808" />
+            <circle
+              cx="15"
+              cy="10"
+              r="2.5"
+              fill="none"
+              stroke="#000080"
+              strokeWidth="0.3"
             />
+            <circle cx="15" cy="10" r="0.3" fill="#000080" />
+            {Array.from({ length: 24 }).map((_, i) => {
+              const angle = (i * 15 - 90) * (Math.PI / 180);
+              const x1 = 15 + Math.cos(angle) * 0.3;
+              const y1 = 10 + Math.sin(angle) * 0.3;
+              const x2 = 15 + Math.cos(angle) * 2.5;
+              const y2 = 10 + Math.sin(angle) * 2.5;
+              return (
+                <line
+                  key={i}
+                  x1={x1}
+                  y1={y1}
+                  x2={x2}
+                  y2={y2}
+                  stroke="#000080"
+                  strokeWidth="0.2"
+                />
+              );
+            })}
           </svg>
         </a>
       </div>

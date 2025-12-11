@@ -1,73 +1,59 @@
 import type { User } from "@/features/portfolio/types/user";
 
 export const USER: User = {
-  firstName: "Chánh Đại",
-  lastName: "Nguyễn",
-  displayName: "Chánh Đại",
-  username: "ncdai",
+  firstName: "Yug",
+  lastName: "Gupta",
+  displayName: "Yug Gupta",
+  username: "yuggupta",
   gender: "male",
   pronouns: "he/him",
-  bio: "Creating with code. Small details matter.",
+  bio: "Building products and pushing boundaries with code.",
   flipSentences: [
-    "Creating with code. Small details matter.",
-    "Design Engineer",
-    "Open Source Contributor",
+    "Building products and pushing boundaries with code.",
+    "Full-Stack Developer",
+    "Founder & Product Builder",
   ],
-  address: "Ho Chi Minh City, Viet Nam",
-  phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
-  website: "https://chanhdai.com",
-  jobTitle: "Design Engineer",
+  address: "Madhya Pradesh, India",
+  phoneNumber: "", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  email: "", // base64 encoded - Add your email here
+  website: "https://yuggupta.com",
+  jobTitle: "Founding Software Engineer @AGI_Inc",
   jobs: [
     {
-      title: "Senior Frontend Developer & UI Design Lead",
-      company: "Simplamo",
-      website: "https://simplamo.com?ref=IN-926722",
+      title: "Founding Software Engineer",
+      company: "AGI Inc",
+      website: "https://www.theagi.company",
     },
     {
-      title: "Founder",
-      company: "Quaric",
-      website: "https://quaric.com",
+      title: "Founder & Full Stack Developer",
+      company: "Proton Labs",
+      website: "https://protonlabs.dev",
     },
   ],
-  //   about: `
-  // Hello, World! I am Chánh Đại — a Design Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
-
-  // With 5+ years of experience, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies. Beyond work, I love exploring new technologies and turning ideas into reality through personal projects.
-
-  // One of my key projects, [ZaDark](https://zadark.com), launched in 2022, enhances the Zalo experience on PC and Web, surpassing 80k+ downloads on [SourceForge](https://sourceforge.net/projects/zadark) and reaching 20k+ active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) (as of Sep 2025).
-
-  // I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com) — iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. It has earned 4k+ weekly downloads on [npm](https://www.npmjs.com/package/@ncdai/react-wheel-picker) and was selected for [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker) summer 2025 cohort.
-
-  // Let's connect and collaborate!
-  //   `,
   about: `
-- **Design Engineer** with **5+ years of experience**, known for pixel-perfect execution and strong attention to small details.
-- Skilled in **Next.js**, **React**, **TypeScript**, and modern front-end technologies; building high-quality, user-centric web and mobile applications.
-- Passionate about exploring new technologies and turning ideas into reality through polished, thoughtfully crafted personal projects.
-- Creator of [ZaDark](https://zadark.com) (2022): enhances the Zalo experience on PC & Web
-  - **80k+ downloads** on [SourceForge](https://sourceforge.net/projects/zadark)
-  - **30k+ active users** on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob)
-- Creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com): iOS-like wheel picker with inertia scrolling & infinite loop
-  - **9k+ weekly downloads** on [npm](https://www.npmjs.com/package/@ncdai/react-wheel-picker)
-  - [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker) summer 2025 cohort
+- **Full-Stack Developer** with **5 years of coding experience**, started coding at age 11
+- Founder of **Proton Labs**, a development agency building multiple products with **$20K+ in revenue**
+- Contributed to building **real evals and evaluation systems for web agents** at **AGI Inc**
+- Built multiple successful projects including **Hyperbop** and various innovative products
+- Passionate about **learning, building, and exploring new technologies**
+- Worked with **200+ websites** throughout career
+- Always curious and eager to tackle new challenges
 `,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
+  avatar:
+    "https://pbs.twimg.com/profile_images/1893314235712839683/IGEji2Nu_400x400.jpg",
   ogImage:
     "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1764345394",
   namePronunciationUrl: "/audio/chanhdai.mp3",
-  timeZone: "Asia/Ho_Chi_Minh",
+  timeZone: "Asia/Kolkata",
   keywords: [
-    "ncdai",
-    "nguyenchanhdai",
-    "nguyen chanh dai",
-    "chanhdai",
-    "chanh dai",
-    "iamncdai",
-    "quaric",
-    "zadark",
-    "nguyễn chánh đại",
-    "chánh đại",
+    "yug gupta",
+    "yuggupta",
+    "proton labs",
+    "full-stack developer",
+    "web developer",
+    "product builder",
+    "hyperwarp",
+    "agi inc",
   ],
-  dateCreated: "2023-10-20", // YYYY-MM-DD
+  dateCreated: "2026-01-01", // YYYY-MM-DD
 };

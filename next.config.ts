@@ -27,9 +27,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source:
-          "/:section(blog|components)/writing-effect-inspired-by-apple:extension(.mdx)?",
-        destination: "/:section/apple-hello-effect:extension",
+        source: "/blog/writing-effect-inspired-by-apple:extension(.mdx)?",
+        destination: "/blog/apple-hello-effect:extension",
         permanent: true,
       },
     ];
@@ -41,16 +40,8 @@ const nextConfig: NextConfig = {
         destination: "/blog.mdx/:slug",
       },
       {
-        source: "/components/:slug.mdx",
-        destination: "/blog.mdx/:slug",
-      },
-      {
         source: "/rss",
         destination: "/blog/rss",
-      },
-      {
-        source: "/registry/rss",
-        destination: "/components/rss",
       },
     ];
   },
